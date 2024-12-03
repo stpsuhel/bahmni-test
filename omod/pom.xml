@@ -12,6 +12,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>omod</name>
     <description>omod</description>
+    <packaging>jar</packaging>
     <url/>
     <licenses>
         <license/>
@@ -25,8 +26,6 @@
         <tag/>
         <url/>
     </scm>
-    <packaging>jar</packaging>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -57,20 +56,13 @@
 <!--        </plugins>-->
 
         <plugins>
-            <!-- OpenMRS Maven Plugin -->
             <plugin>
                 <groupId>org.openmrs.maven.plugins</groupId>
-                <artifactId>openmrs-sdk-maven-plugin</artifactId>
-                <extensions>true</extensions>
+                <artifactId>maven-openmrs-plugin</artifactId>
             </plugin>
-
-            <!-- Maven Compiler Plugin -->
             <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
